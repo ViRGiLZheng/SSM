@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/springMVC.xml</file>
+          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Spring-4.3.18.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Spring MVC-4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../extend_Package/spring-web-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/jstl.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/asm-7.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/standard.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/ant-1.10.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/ognl-3.2.10.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/cglib-3.2.10.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/log4j-1.2.17.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/mybatis-3.5.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/aopalliance-1.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/log4j-api-2.11.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/slf4j-api-1.7.25.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/log4j-core-2.11.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/ant-launcher-1.10.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/commons-logging-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/javassist-3.24.1-GA.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/mybatis-spring-1.3.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/slf4j-log4j12-1.7.25.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-tx-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-aop-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-jms-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-orm-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-oxm-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-core-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-jdbc-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-test-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/mysql-connector-java-8.0.13.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-beans-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-aspects-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-context-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-messaging-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-expression-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-instrument-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-context-support-4.3.18.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Spring01/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
