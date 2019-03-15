@@ -19,4 +19,17 @@ public class ProjectServiceImpl implements ProjectService {
         }else
         return null;
     }
+
+
+    public int transFor(int outid,double balance,int accInNo,String accInName){
+        int index=0;
+        int id = projectMapper.selid(accInNo,accInName);
+        if (balance<=projectMapper.selbalance(outid)){
+            index+=projectMapper.upBalance(-balance,outid);
+            index+=projectMapper.upBalance(balance,id);
+            return index;
+        }else{
+            return -1;
+        }
+    }
 }
