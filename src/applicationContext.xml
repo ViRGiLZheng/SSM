@@ -32,13 +32,13 @@
 
     <tx:advice id="txAdvice" transaction-manager="txManager">
         <tx:attributes>
-            <tx:method name="upBlance" isolation="SERIALIZABLE" propagation="REQUIRES_NEW"/>
+            <tx:method name="up*" isolation="SERIALIZABLE" propagation="REQUIRES_NEW"/>
         </tx:attributes>
     </tx:advice>
 
-    <aop:config>
-        <aop:pointcut id="mypoint" expression="execution(* com.ssm.service.*.transFor(..))" />
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint" />
+    <aop:config proxy-target-class="true" >
+        <aop:pointcut id="my" expression="execution(* com.ssm.service.Impl.ProjectServiceImpl.transFor(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="my" />
     </aop:config>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

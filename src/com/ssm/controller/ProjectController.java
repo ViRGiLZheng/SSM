@@ -30,7 +30,7 @@ public class ProjectController {
        }else {
            return "redirect:/login.jsp";
        }
-        return "/main.jsp";
+        return "/main";
     }
 
     @RequestMapping(value = "/transfer")
@@ -38,10 +38,15 @@ public class ProjectController {
         Account ac = (Account) session.getAttribute("account");
         int index = projectServiceImpl.transFor(ac.getId(),balance,accIn,name);
         if (index==2){
-            return "/success.jsp";
+            return "/success";
         }else
-            return "/error.jsp";
+            return "/error";
     }
 
-
+    @RequestMapping("changePassword")
+    public String changePassword(String newPassword,int accNo,String password){
+        int index=projectServiceImpl.changePassword(newPassword, accNo, password);
+        System.out.println(newPassword+" "+accNo+" "+password);
+        return index==1?"/success":"/error";
+    }
 }

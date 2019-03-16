@@ -11,7 +11,7 @@ public interface ProjectMapper {
     @Select("select * from acount where accno=#{accno} and password=#{password}")
     Account acc(@Param("accno")int accno, @Param("password") String password);
 
-    @Update("update acount set balance=#{balance} where id=#{id} ")
+    @Update("update acount set balance=balance+#{balance} where id=#{id} ")
     int upBalance (@Param("balance")double balance,@Param("id")int id);
 
     @Select("select id from acount where accno=#{accno} and name=#{name}")
@@ -19,4 +19,7 @@ public interface ProjectMapper {
 
     @Select("select balance from acount where id=#{id}")
     double selbalance(@Param("id") int id);
+
+    @Update("update acount set password=#{newpassword} where accno=#{accno} and password=#{password}")
+    int upPassword (@Param("newpassword")String newPassword,@Param("accno") int accNo,@Param("password") String password);
 }

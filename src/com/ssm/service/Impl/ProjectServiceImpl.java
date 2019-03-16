@@ -32,4 +32,12 @@ public class ProjectServiceImpl implements ProjectService {
             return -1;
         }
     }
+
+    public int changePassword(String newPassword,int accNo,String password){
+        int index=0;
+        if (newPassword!=null&password!=null&newPassword!=""&password!=""){
+            index=projectMapper.upPassword(newPassword, accNo, password);
+        }
+        return index==1?1:-1;
+    }
 }

@@ -34,5 +34,9 @@
     <!--静态资源-->
     <!--<mvc:resources mapping="/url目录" location="真实目录"-->
     <mvc:resources mapping="/ig/**" location="/ig/" />
+    <!-- 配置springmvc的视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="suffix" value=".jsp"/>
+    </bean>
 
 </beans>
