@@ -16,6 +16,7 @@
    密码:<input type="password" name="password" > <br>
     <input type="submit" value="登陆" >
 </form>
+<h3>测试验证码</h3>
 </body>
 <script>
     function robotVerified(){
