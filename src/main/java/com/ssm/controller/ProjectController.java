@@ -2,10 +2,9 @@ package com.ssm.controller;
 
 import com.ssm.pojo.Account;
 import com.ssm.service.ProjectService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -48,9 +47,8 @@ public class ProjectController {
         return index==1?"page/success":"page/error";
     }
 
-    @RequestMapping("/page/{name}}")
-    public String page(@RequestParam("name") String name){
-
-        return "page/"+name;
+    @RequestMapping("/page/{path}")
+    public String page(@PathVariable("path") String path){
+        return "page/"+path;
     }
 }

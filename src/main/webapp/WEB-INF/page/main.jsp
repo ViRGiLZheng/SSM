@@ -20,8 +20,6 @@
     <input type="submit" value="提交" >
 </form>
 <br>
-<a href="/page/changePassword.jsp">更改密码</a>
-
-
+<a href="/page/changePassword">更改密码</a>
 </body>
 </html>
