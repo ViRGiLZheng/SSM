@@ -17,4 +17,9 @@
     <input type="submit" value="登陆" >
 </form>
 </body>
+<script>
+    function robotVerified(){
+        console.log('Verified: not robot');
+    }
+</script>
 </html>

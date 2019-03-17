@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+">
+
+    <!--handler-->
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">-->
+        <!--<property name="urlMap">-->
+            <!--<map>-->
+                <!--<entry key="url" value="转发的地址"></entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--adapter-->
+    <!--<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>-->
+    <!--Viewer-->
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value=""></property>-->
+        <!--<property name="suffix" value=""></property>-->
+    <!--</bean>-->
+    <!---->
+
+    <context:component-scan base-package="com.ssm.controller"/>
+    <!--相当于配了Handler和Adapter-->
+    <mvc:annotation-driven />
+    <!--静态资源-->
+    <!--<mvc:resources mapping="/url目录" location="真实目录"-->
+    <mvc:resources mapping="/ig/**" location="/ig/" />
+    <!-- 配置springmvc的视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+</beans>
