@@ -1,7 +1,6 @@
 package com.ssm.controller;
 
 import com.ssm.pojo.Account;
-import com.ssm.service.Impl.ProjectServiceImpl;
 import com.ssm.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -20,17 +18,14 @@ public class ProjectController {
     private ProjectService projectServiceImpl;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(@RequestParam int accno,@RequestParam String password, Model model,HttpSession session){
-        System.out.println("accno"+accno);
-        System.out.println("password"+password);
+    public String login(@RequestParam int accno,@RequestParam String password, HttpSession session){
         Account ac= projectServiceImpl.login(accno,password);
         if (ac!=null){
-           model.addAttribute("account",ac);
            session.setAttribute("account",ac);
        }else {
            return "redirect:/login.jsp";
        }
-        return "/main";
+        return "/WEB-INF/page/main";
     }
 
     @RequestMapping(value = "/transfer")
