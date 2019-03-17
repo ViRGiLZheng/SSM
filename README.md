@@ -13,8 +13,14 @@ Idea x64
 1、登陆，用户名和密码校验
 2、转账，将账户余额转给别的账户
 3、更改密码，可以更改自己的密码  
-（目前还没有加入maven，所以包结构结构有点乱，晚些时间加入之后，再捋一下目录）  
-   
+4、Maven正式加入本项目，包结构清晰了，项目具有更多的拓展性
+
+Maven总结  
+1、导入包主要使用dependency标签  
+2、<packaging>war</packaging>使用此配置可以解决package出来的是jar包的情况  
+3、 <build><resources><resource><directory>src/main/resources</directory><filtering>true</filtering></resource>  
+</resources></build>此配置解决resource中xml的配置问题  
+    
 Spring总结  
 1、IOC和DI说的是同一件事情，但是角度是不一样的角度  
 IOC是指控制反转，举个例子来表达是以前需要自己new的service现在可以通过Spring的BeanFactory获取  
@@ -24,7 +30,8 @@ IOC是指控制反转，举个例子来表达是以前需要自己new的service�
 2、AOP：面向切面编程。名词很高大上，但是举个例子来表达就是，创建一个父类，子类继承父类，然后重写子类的  
 方法，在方法上方就是前置通知，在方法后方就是后置，然后异常和环绕就是try catch和前后类一起用。子类中进行  
 切面的通知撰写，在中间执行父类的对应方法，当然父类的方法可以动态改变，这也是切面编程的切点设置。  
-SpringMVC总结
+   
+SpringMVC总结  
 SpringMVC基于web包，原名SpringWebMVC，但是叫的比较多的还是SpringMVC，通过官方文档的说明来看，SpringMVC有  
 两种配置方式，创建一个类继承和XML的配置方式（SpringBoot可以简化配置，但是萌新楼主还在学习中），本项目用的还是  
 传统的XML来配置。  
