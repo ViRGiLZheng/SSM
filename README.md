@@ -9,27 +9,33 @@ Win x64
 Idea x64  
 注意：MySQL8.0的连接方式和以往版本都不一样，要更改一下用户名和密码，然后驱动也不兼容旧的一定要8.0之后的  
 
+=============================================================================================  
+接下来的一段时间的更新说明,感谢截至2020年2月11日还给我Star的朋友们  
+1. 将项目的一些依赖包进行更新，增加留言板块  目标完成日期 3月1日。  
+2. 加入前端页面的支持，并且增加点击计数，部署在远程服务器，胖友们可以在上面留言想要的功能 3月15日。    
+3. 加入我的体重记录和提示督促我减肥成功。  ****
+
 功能简介  
-1、登陆，用户名和密码校验
-2、转账，将账户余额转给别的账户
-3、更改密码，可以更改自己的密码  
-4、Maven正式加入本项目，包结构清晰了，项目具有更多的拓展性
-5、加入日志 使用的log4j的日志 主要记录数据库  
-6、使用WEB-INF保护重要的地址  
+1. 登陆，用户名和密码校验
+2. 转账，将账户余额转给别的账户
+3. 更改密码，可以更改自己的密码  
+4. Maven正式加入本项目，包结构清晰了，项目具有更多的拓展性
+5. 加入日志 使用的log4j的日志 主要记录数据库  
+6. 使用WEB-INF保护重要的地址  
 
 Maven总结  
-1、导入包主要使用dependency标签  
-2、<packaging>war</packaging>使用此配置可以解决package出来的是jar包的情况  
-3、 <build><resources><resource><directory>src/main/resources</directory><filtering>true</filtering></resource>  
-</resources></build>此配置解决resource中xml的配置问题  
+1. 导入包主要使用dependency标签  
+2. <packaging>war</packaging>使用此配置可以解决package出来的是jar包的情况  
+3.  <build><resources><resource><directory>src/main/resources</directory><filtering>true</filtering></resource>  
+ </resources></build>此配置解决resource中xml的配置问题  
     
 Spring总结  
-1、IOC和DI说的是同一件事情，但是角度是不一样的角度  
+1. IOC和DI说的是同一件事情，但是角度是不一样的角度  
 IOC是指控制反转，举个例子来表达是以前需要自己new的service现在可以通过Spring的BeanFactory获取  
 使用两个注解@Resource或者@Autowired进行装配，自动匹配可以通过类型或名字进行装配，类似于赋值的过程  
 @Resource是JAVAX的注解 @Autowired是Spring的注解。这个的作用是简便了Web中重复调用的对象和生成的浪费  
 日常也能通过这个框架来进行使用。  
-2、AOP：面向切面编程。名词很高大上，但是举个例子来表达就是，创建一个父类，子类继承父类，然后重写子类的  
+2. AOP：面向切面编程。名词很高大上，但是举个例子来表达就是，创建一个父类，子类继承父类，然后重写子类的  
 方法，在方法上方就是前置通知，在方法后方就是后置，然后异常和环绕就是try catch和前后类一起用。子类中进行  
 切面的通知撰写，在中间执行父类的对应方法，当然父类的方法可以动态改变，这也是切面编程的切点设置。  
    
