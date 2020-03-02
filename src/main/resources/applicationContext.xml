@@ -29,6 +29,11 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
+    <bean id="Discuss"   class="com.ssm.pojo.Discuess">
+        <property name="date"  value="java.util.Date"></property>
+        <property name="msg" value=""></property>
+    </bean>
+
     <tx:advice id="txAdvice" transaction-manager="txManager">
         <tx:attributes>
             <tx:method name="up*" isolation="SERIALIZABLE" propagation="REQUIRES_NEW"/>

@@ -31,12 +31,38 @@ Maven总结
 3.  <build><resources><resource><directory>src/main/resources</directory><filtering>true</filtering></resource>  
  </resources></build>此配置解决resource中xml的配置问题  
     
-Spring总结  
-1. IOC和DI说的是同一件事情，但是角度是不一样的角度  
-IOC是指控制反转，举个例子来表达是以前需要自己new的service现在可以通过Spring的BeanFactory获取  
+SpringFramework
+1. IOC和DI其实是同一件事 
+================20200225 更新===============
+以下为官方的解释
+>IoC is also known as dependency injection (DI). 
+>It is a process whereby objects define their dependencies
+> (that is, the other objects they work with) only through 
+>constructor arguments, arguments to a factory method, or 
+>properties that are set on the object instance after 
+>it is constructed or returned from a factory method. 
+>The container then injects those dependencies when 
+>it creates the bean. This process is fundamentally 
+>the inverse (hence the name, Inversion of Control) of the bean 
+>itself controlling the instantiation or location of its dependencies by 
+>using direct construction of classes or a mechanism such as the Service Locator pattern.
+
+IOC也被认为是依赖注入（DI）在此过程中，对象仅通过构造函数参数，工厂方法的参数或在构造或从工厂方法返回后
+在对象实例上设置的属性来定义其依赖项（即，与它们一起使用的其他对象）。当创建这个对象的时候注入他的依赖项。
+
+IOC和DI两者可以举个例子来解释，是以前需要自己new的service现在可以通过Spring的BeanFactory获取。
+创建一个新的实例，一般通过构造器，现在有工厂装配，现在创建的时候还会注入依赖项。  
 使用两个注解@Resource或者@Autowired进行装配，自动匹配可以通过类型或名字进行装配，类似于赋值的过程  
 @Resource是JAVAX的注解 @Autowired是Spring的注解。这个的作用是简便了Web中重复调用的对象和生成的浪费  
-日常也能通过这个框架来进行使用。  
+日常也能通过这个框架来进行使用。
+依赖注入有4种方式
++ 基于构造器注入
++ 基于Setter方式注入
++ 注解方式注入  
+共性：基于构造器和Setter方法注入都是使用XML配置
+差异性：构造器注入在XML配置文件中使用constructor-arg 可以指定索引index来指定，也可以使用构造器的参数名，索引从0开始
+        基于Setter方式注入，在XML中配置使用property 对应的值使用指定的方式,Bean需要有空构造器不然会报错
+        一个是使用构造器，一个使用Setter方式赋值
 2. AOP：面向切面编程。名词很高大上，但是举个例子来表达就是，创建一个父类，子类继承父类，然后重写子类的  
 方法，在方法上方就是前置通知，在方法后方就是后置，然后异常和环绕就是try catch和前后类一起用。子类中进行  
 切面的通知撰写，在中间执行父类的对应方法，当然父类的方法可以动态改变，这也是切面编程的切点设置。  
